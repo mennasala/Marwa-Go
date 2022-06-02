@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Edit colleges</title>
+    </head>
+    <body>
+        <h3>Edit colleges</h3>
+        <form method="POST" action="/colleges/update">
+            <table>
+                <tr>
+                    <td>col_id</td>
+                    <td>{{.colleges.col_id}}</td>
+                </tr>
+                <tr>
+                    <td>col_type</td>
+                    <td><input type="text" col_type="col_type" value="{{.colleges.type}}"></td>
+                </tr>
+                <tr>
+                    <td>col_add</td>
+                    <td><input type="text" name="col_add" value="{{.colleges.col_add}}"></td>
+                </tr>
+                <tr>
+                    <td valign="top">DEP</td>
+                    <td>
+                        <textarea name="description" id="" cols="20" rows="5">{{.colleges.DEP}}</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="submit" value="Save">
+                        <input type="hidden" name="id" value="{{.colleges.ID}}">
+                    </td>
+                </tr>
+            </table>
+
+
+
+
+        </form>
+    </body>
+</html>
